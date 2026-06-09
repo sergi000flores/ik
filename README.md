@@ -1,9 +1,10 @@
 
 #  File Explorer
 
-<p align="center">
-  <img src="images/logo.png" width="180">
-</p>
+
+
+File Explorer es una aplicación creada en C# Windows Forms que integra diferentes herramientas para la gestión de archivos, edición de documentos, validación de datos, administración de bases de datos y manejo de contenido multimedia. Su objetivo es centralizar estas funciones en una sola plataforma, facilitando la organización, el procesamiento y el almacenamiento eficiente de la información.
+ 
 
 <p align="center">
   Explorador de archivos avanzado desarrollado en C# Windows Forms
@@ -19,19 +20,19 @@
 
 ##  Ventana principal
 
-![Main Window](images/main-window.png)
+
 
 ---
 
 ##  Explorador de archivos
 
-![Explorer](images/file-explorer.png)
+
 
 ---
 
 ##  Reproductor de música
 
-![Music Player](images/music-player.png)
+
 
 ---
 
