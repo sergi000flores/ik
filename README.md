@@ -1,3 +1,4 @@
+![image alt](https://github.com/sergi000flores/ik/blob/546a6c1a0ae98f3604a695712a37e1154afc3ff0/Captura%20de%20pantalla%202026-06-09%20072723.png)
 # File Explorer
 
 Aplicación desarrollada en C# Windows Forms que integra múltiples herramientas para la gestión de archivos, edición de documentos, validación de datos, manejo multimedia y migración de información hacia bases de datos.
