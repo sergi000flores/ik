@@ -1,45 +1,375 @@
 
-# File Explorer
-![image alt](https://github.com/sergi000flores/ik/blob/546a6c1a0ae98f3604a695712a37e1154afc3ff0/Captura%20de%20pantalla%202026-06-09%20072723.png)
+#  File Explorer
 
-Aplicación desarrollada en C# Windows Forms que integra múltiples herramientas para la gestión de archivos, edición de documentos, validación de datos, manejo multimedia y migración de información hacia bases de datos.
+<p align="center">
+  <img src="images/logo.png" width="180">
+</p>
 
-## Características principales
+<p align="center">
+  Explorador de archivos avanzado desarrollado en C# Windows Forms
+</p>
 
-### Explorador de archivos
+<p align="center">
+  Administración de archivos • Multimedia • Bases de datos • Edición de documentos • Validación de datos
+</p>
 
-* Navegación entre carpetas y unidades
-* Búsqueda de archivos y directorios
-* Copiar, mover, renombrar y eliminar archivos
-* Compresión y extracción ZIP
-* Barra lateral de navegación rápida
+---
 
-### Multimedia
+#  Capturas del sistema
 
-* Reproductor de música con:
+##  Ventana principal
 
-  * Letras sincronizadas
-  * Ecualizador de 10 bandas
-  * Edición de metadatos
-  * Portadas automáticas
+![Main Window](images/main-window.png)
+
+---
+
+##  Explorador de archivos
+
+![Explorer](images/file-explorer.png)
+
+---
+
+##  Reproductor de música
+
+![Music Player](images/music-player.png)
+
+---
+
+##  Reproductor de video
+
+
+
+---
+
+## Editor de documentos
+
+
+
+---
+
+## Editor de imágenes
+
+
+---
+
+##  Migración de bases de datos
+
+
+
+---
+
+# Descripción
+
+File Explorer es una aplicación desarrollada en C# Windows Forms que integra herramientas para:
+
+* Exploración y administración de archivos
+* Reproducción multimedia
+* Edición de documentos
+* Validación de datos
+* Conversión y exportación
+* Migración hacia bases de datos
+* Manejo de imágenes con GPS
+* Edición de metadatos musicales
+
+El proyecto fue desarrollado con una arquitectura modular utilizando formularios, helpers, controles personalizados y modelos.
+
+---
+
+#  Características principales
+
+##  Explorador de archivos
+
+* Navegación entre carpetas
+* Exploración de unidades
+* Copiar, mover y eliminar archivos
+* Compresión ZIP
+* Extracción ZIP
+* Drag & Drop
+* Filtros de búsqueda
+* Papelera de reciclaje
+* Iconos personalizados
+
+##  Multimedia
+
+* Reproductor musical
+* Letras sincronizadas
+* Ecualizador de 10 bandas
 * Reproductor de video
 * Grabador de audio
 * Cámara web integrada
+* Portadas automáticas
+* Edición de metadatos MP3
 
-### Edición de documentos
+##  Documentos
 
-* Editor de archivos TXT, JSON, XML, CSV y Excel
-* Editor de documentos Word y PDF
-* Editor y visor de imágenes
-* Conversión entre formatos
+* Editor TXT
+* Editor JSON
+* Editor XML
+* Editor CSV
+* Editor Excel
+* Editor Word
+* Editor PDF
+* Conversión de formatos
 
-### Validación y procesamiento de datos
+## Bases de datos
 
-* Validación automática de registros
+* Migración a SQL Server
+* Migración a MariaDB
+* Creación automática de tablas
+* Validación previa de datos
+* Consultas de registros
+* Logs de migración
+
+##  Procesamiento de datos
+
+* Validación automática
 * Corrección de errores
 * Exportación de datos
-* Generación de gráficas
-* Migración hacia SQL Server y MariaDB
+* Conversión tabular
+* Extracción desde Word/PDF
+
+##  Imágenes y GPS
+
+* Lectura EXIF
+* Coordenadas GPS
+* OpenStreetMap
+* Google Maps
+* Visualización geográfica
+
+---
+
+#  Arquitectura del proyecto
+
+```text
+FileExplorer/
+│
+├── Forms/
+├── Helpers/
+├── Controls/
+├── Models/
+├── Resources/
+├── images/
+├── README.md
+└── FileExplorer.sln
+```
+
+---
+
+# Formularios principales
+
+##  Main Form
+
+Ventana principal del sistema encargada de coordinar los módulos del explorador.
+
+---
+
+##  Music Player Form
+
+Reproductor de música con:
+
+* Letras sincronizadas
+* Ecualizador
+* Portadas automáticas
+* Playlists
+* Caché local
+* Edición de metadatos
+
+### Librerías utilizadas
+
+* NAudio
+* TagLib#
+* Spotify API
+* LRCLib API
+
+---
+
+##  Video Player Form
+
+Reproductor multimedia basado en LibVLCSharp.
+
+### Funciones
+
+* Pantalla completa
+* Control de velocidad
+* Barra de progreso
+* Atajos de teclado
+* Control de volumen
+
+### Librerías utilizadas
+
+* LibVLCSharp
+* LibVLCSharp.WinForms
+
+---
+
+## Word PDF Editor Form
+
+Editor de documentos compatible con:
+
+* DOCX
+* PDF
+
+### Funciones
+
+* Negrita
+* Cursiva
+* Subrayado
+* Imágenes
+* Tablas
+* Colores
+* Exportación PDF
+
+### Librerías utilizadas
+
+* DocumentFormat.OpenXml
+* UglyToad.PdfPig
+
+---
+
+## Migration Form
+
+Sistema de migración de datos hacia:
+
+* SQL Server
+* MariaDB
+
+### Funciones
+
+* Verificación de conexión
+* Creación automática de BD
+* Creación de tablas
+* Inserción de registros
+* Barra de progreso
+* Logs
+
+### Librerías utilizadas
+
+* Microsoft.Data.SqlClient
+* MySqlConnector
+
+---
+
+#  Helpers principales
+
+##  DatabaseMigrator
+
+Gestiona:
+
+* Conexiones
+* Creación de BD
+* Migraciones
+* Inserciones masivas
+
+---
+
+##  DataExporter
+
+Exportación a:
+
+* CSV
+* JSON
+* XML
+* TXT
+* HTML
+* Markdown
+* Excel
+
+---
+
+##  DataParser
+
+Procesamiento de:
+
+* CSV
+* JSON
+* XML
+* Excel
+* TXT
+
+---
+
+## DataValidator
+
+Valida:
+
+* Emails
+* Fechas
+* Teléfonos
+* Códigos postales
+* Campos vacíos
+
+---
+
+##  EqualizerSampleProvider
+
+Ecualizador de audio en tiempo real de 10 bandas.
+
+---
+
+##  FileHelper
+
+Administración avanzada de archivos y directorios.
+
+---
+
+##  GpsHelper
+
+Obtención de coordenadas GPS desde imágenes EXIF.
+
+---
+
+#  Controls personalizados
+
+##  EqualizerControl
+
+Ecualizador gráfico con presets:
+
+* Rock
+* Pop
+* Jazz
+* Clásica
+* Electrónica
+* Bass Boost
+
+---
+
+##  FileListControl
+
+Control tipo Explorador de Windows.
+
+### Funciones
+
+* Abrir archivos
+* Renombrar
+* ZIP
+* Papelera
+* Drag & Drop
+
+---
+
+##  SidebarControl
+
+Barra lateral de navegación rápida.
+
+---
+
+# 🧠 Modelos del sistema
+
+##  PlaylistItem
+
+Modelo de canciones y metadatos musicales.
+
+##  ValidationError
+
+Representa errores detectados durante validación.
+
+##  GpsLocation
+
+Modelo de coordenadas GPS y mapas.
+
+##  MigrationOptions
+
+Configuración de conexión para migraciones.
 
 ---
 
@@ -51,104 +381,46 @@ Aplicación desarrollada en C# Windows Forms que integra múltiples herramientas
 
 ## Framework
 
-* Windows Forms
 * .NET
+* Windows Forms
 
 ## Librerías principales
 
 * NAudio
 * TagLib#
-* ClosedXML
+* LibVLCSharp
 * Newtonsoft.Json
 * OpenCvSharp
 * SharpAvi
+* ClosedXML
+* NPOI
 * PdfPig
 * DocumentFormat.OpenXml
 * MySqlConnector
 
 ---
 
-# Módulos del sistema
-
-## Main Form
-
-Ventana principal del explorador de archivos y centro de control del sistema.
-
-## Audio Recorder Form
-
-Grabador de audio compatible con WAV y MP3.
-
-## Camera Form
-
-Captura de fotografías y grabación de video mediante cámara web.
-
-## Email Form
-
-Envío de correos electrónicos con archivos adjuntos.
-
-## Excel Editor Form
-
-Editor de hojas de cálculo con soporte para fórmulas.
-
-## File Editor Form
-
-Editor y visor universal de archivos y documentos.
-
-## Image Viewer Form
-
-Visor y editor de imágenes con soporte EXIF y GPS.
-
-## Migration Form
-
-Migración de datos hacia SQL Server y MariaDB.
-
-## Music Player Form
-
-Reproductor musical con ecualizador, letras y edición de metadatos.
-
-## Video Player Form
-
-Reproductor multimedia integrado utilizando Windows Media Player COM API.
-
-## Word Pdf Editor Form
-
-Editor de documentos Word y PDF.
-
----
-
-# Funciones destacadas
-
-* Reproducción multimedia
-* Letras sincronizadas
-* Ecualizador de audio
-* Edición de metadatos MP3
-* Conversión de archivos
-* Validación de datos
-* Migración a bases de datos
-* Manejo de imágenes con GPS
-* Exportación a:
-
-  * CSV
-  * JSON
-  * XML
-  * Markdown
-  * Excel
-  * PDF
-
----
-
-# APIs y servicios utilizados
+#  APIs utilizadas
 
 * Spotify API
 * LRCLib API
 * OpenStreetMap
+* Leaflet API
 * Google Maps
 * SMTP
-* Windows Media Player COM API
 
 ---
 
-# Instalación
+#  Requisitos
+
+* Windows 10/11
+* Visual Studio
+* .NET Framework
+* Cámara y micrófono opcionales
+
+---
+
+#  Instalación
 
 ## Clonar repositorio
 
@@ -156,67 +428,41 @@ Editor de documentos Word y PDF.
 git clone https://github.com/usuario/file-explorer.git
 ```
 
-## Abrir proyecto
+## Abrir solución
 
-Abrir la solución en Visual Studio.
+```text
+FileExplorer.sln
+```
 
 ## Restaurar paquetes NuGet
 
-```bash
+```text
 Restore NuGet Packages
 ```
 
 ## Ejecutar proyecto
 
-```bash
+```text
 F5
 ```
 
 ---
 
-# Requisitos
-
-* Windows 10/11
-* .NET Framework
-* Visual Studio
-* Cámara y micrófono opcionales
 
 ---
 
-# Capturas
+#  Documentación
 
-Agregar imágenes del sistema dentro de una carpeta `/images`.
-
-Ejemplo:
-
-```md
-![Main Window](images/main.png)
-```
+La documentación completa del sistema se encuentra incluida en el proyecto académico.
 
 ---
 
-# Estructura del proyecto
-
-```text
-FileExplorer/
-│
-├── Forms/
-├── Helpers/
-├── Controls/
-├── Models/
-├── Resources/
-├── README.md
-└── FileExplorer.sln
-```
-
----
-
-# Autor
+#  Autor
 
 Sergio Flores
 
 ---
 
-# Licencia
+#  Licencia
 
-Proyecto educativo desarrollado con fines académicos.
+Proyecto desarrollado con fines educativos y académicos.
